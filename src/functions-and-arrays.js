@@ -212,7 +212,7 @@ function howManyTimes(wordsArr, word) {
     return 0;
   } 
 
-  count = 0;
+  let count = 0;
   wordsArr.forEach(function(element, index){
     if (word === element) {
       count += 1;
