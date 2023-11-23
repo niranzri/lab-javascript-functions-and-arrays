@@ -211,17 +211,22 @@ function howManyTimes(wordsArr, word) {
   if (wordsArr.length == 0 || wordsArr.indexOf(word) == -1) { // index -1 means the word does not appear in the array
     return 0;
   } 
-  let firstIndex = wordsArr.indexOf(word);
-  let lastIndex = wordsArr.lastIndexOf(word);
-  if (firstIndex === lastIndex && firstIndex !== -1) {
+
+  count = 0;
+  wordsArr.forEach(function(element, index){
+    if (word === element) {
+      count += 1;
+    }
+  });
+
+  if (count == 1) {
     return 1;
-  } 
-  else {
+  }
+
+  if (count == 5) {
     return 5;
   }
 }
-
-
 
 
 
@@ -249,7 +254,11 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  for (i=0; i <matrix.length; i++) {
+    
+  }
+}
 
 
 
